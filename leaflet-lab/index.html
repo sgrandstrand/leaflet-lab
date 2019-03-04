@@ -1,42 +1,58 @@
+
+<!--Sarah Grandstrand Index 2019
+    Lab 1 GEOG 575
+    Goal is to see the average number of visitors at each national park per month
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title></title>
-
-		<!--put your external stylesheet links here-->
-		<link rel="stylesheet" href="css/style.css">
+    <head>
+        <meta charset="utf-8">
+        <!--<meta name="viewport" content="width=device-width"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title></title>
+       
+        <!--put your external stylesheet links here-->
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="lib/leaflet/leaflet.css">
-    
-		<!--[if IE<9]>
-			<link rel="stylesheet" href="css/style.ie.css">
-		<![endif]-->
-	</head>
-    
-	<body>
-        <div  
-        id = "mydiv">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/leaflet.zoomhome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
 
-        </div>
-        
-        <div 
-        id = "map">
-        </div>
-        
+    </head>
 
-        
-        
-        
-		<!--put your initial page content here-->
-			
-		<!--you can also use this space for internal scripts or stylesheets;
-		place these within <script> or <style> tags-->
 
-		<!--put your external script links here-->
-		<script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
+    <body>
+
+        <div id = "map">
+
+            <div id="references">
+            <p> Created by <b>Sarah Grandstrand;</b> March 2019</p>
+            <p> University of Wisconsin - Madison; Geography Department</p>
+            <p> Sources</p>
+            <p> https://irma.nps.gov/Stats/Reports/National</p>
+            <p>https://catalog.data.gov/dataset/national-parks</p>
+            </div>
+            
+        </div>  
+
+
+        <!--internal scripts or stylesheets -->
+
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+        <!--put your external script links here-->
+        <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
         <script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
-        <script type="text/javascript" src="js/geojson.js"></script>
-        <!--<script type="text/javascript" src="js/main.js"></script> -->
-	</body>
+        <script type="text/javascript" src="lib/leaflet/leaflet.zoomhome.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"> </script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+
+    </body>
 </html>
