@@ -218,7 +218,7 @@ function createSequenceControls(map, attributes) {
             var toggle = '<p id="toggle-text"> Park Boundary <label class="switch" id="toggle-switch"><input type="checkbox"><span class="slider round"></span></label></p>';
 
             $(container).append('<div id="toggle-legend"', [toggle]);
-            
+
 
             //kill any mouse event listeners on the map so map doesnt move when the container is clicked on 
             $(container).on('mousedown dblclick', function (e) {
@@ -450,9 +450,7 @@ function stylePoly(feature, layer) {
         'add': function () {
             layer.bringToBack()
         }
-        //     click: function () { //FIGURE THIS OUT. when use PANEL?? 
-        //    $("#panel").html(Popup); //need some sort of informaiton not just 
-        //    }
+
     });
 }
 
@@ -467,26 +465,20 @@ function createSymbol(data, map) {
         fillOpacity: .40,
     });
 
-    
-    //calls the ID for the toggle switch to add a click event to add or remove boundaries layer
-    document.getElementById("toggle-switch").addEventListener("click", addBoundaries);
 
-    function toggleBoundaries() {
-        if (map.hasLayer(boundaries)) {
-            removeBoundaries();
-        } else {
-            addBoundaries();
-        };
-    };
+    //calls the toggle switch to add or remove boundaries layer if checked or not
+    $(document).ready(function () {
+        $('input[type="checkbox"]').click(function () {
+            if ($(this).is(":checked")) {
+                boundaries.addTo(map);
+            } else if ($(this).is(":not(:checked)")) {
+                map.removeLayer(boundaries);
+            }
+        });
+    });
 
-    function addBoundaries() {
-        boundaries.addTo(map);
-    };
-
-    function removeBoundaries() {
-        map.removeLayer(boundaries);
-    };
 };
+
 
 // **** END OF POLYGON BOUNDARY LAYER FUNCTIONS **** //
 
